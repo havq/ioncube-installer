@@ -26,10 +26,10 @@ else
     fi
 fi
 
-if [ "$PHP_VER" = "7.4" ]; then
-    echo "PHP 7.4 is not supported by ioncube loader yet"
-    exit 1
-fi
+# if [ "$PHP_VER" = "7.4" ]; then
+#     echo "PHP 7.4 is not supported by ioncube loader yet"
+#     exit 1
+# fi
 
 EXTENSION_DIR=$(/usr/bin/php${PHP_VER} -i | grep extension_dir | awk -F "=> " '{print $2}' | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
 
